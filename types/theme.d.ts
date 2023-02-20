@@ -6,6 +6,7 @@ declare module 'styled-components' {
 			s: string;
 			m: string;
 			l: string;
+			xl: string;
 		};
 		spacing: {
 			unset: string;
@@ -27,6 +28,27 @@ declare module 'styled-components' {
 			'7xl': string;
 			'8xl': string;
 		};
+		fonts: {
+			size: {
+				xs: string;
+				s: string;
+				m: string;
+				l: string;
+				display5: string;
+				display4: string;
+				display3: string;
+			};
+			weight: {
+				bold: number;
+				regular: number;
+			};
+			colors: {
+				white: string;
+				gold: string;
+				blue: string;
+				grey: string;
+			};
+		};
 		colors: {
 			gold: string;
 			white: string;
@@ -36,6 +58,10 @@ declare module 'styled-components' {
 			black: string;
 			blue: string;
 			green: string;
+			border?: {
+				lightGrey500: string;
+				gold: string;
+			};
 		};
 	}
 }

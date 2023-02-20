@@ -4,6 +4,8 @@ import { QueryClient, QueryClientConfig, QueryClientProvider } from '@tanstack/r
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { ThemeProvider } from 'styled-components';
+import Header from '@/components/Header';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
 const config: QueryClientConfig = {
 	defaultOptions: {
@@ -30,8 +32,10 @@ export default function App({ Component, pageProps }: AppProps) {
 
 			<QueryClientProvider client={queryClient}>
 				<ThemeProvider theme={darkTheme}>
+					<Header />
 					<GlobalStyle />
 					<Component {...pageProps} />
+					<ReactQueryDevtools />
 				</ThemeProvider>
 			</QueryClientProvider>
 		</>
